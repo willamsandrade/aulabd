@@ -1,5 +1,3 @@
-CREATE DATABASE aulabd;
-
 CREATE TABLE tipo_produto(
     idTipoProduto INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     descTipoProduto VARCHAR(50) NOT NULL 
@@ -9,6 +7,7 @@ CREATE TABLE produto(
     idProduto INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     descProduto VARCHAR(50) NOT NULL,
     qtdProduto INT NOT NULL,
+    unProduto VARCHAR(10) NOT NULL,
     valorProduto DECIMAL(10,2) NOT NULL,
     idTipoProduto INT NOT NULL,
     CONSTRAINT fk_produto_tipo FOREIGN KEY (idTipoProduto) REFERENCES tipo_produto(idTipoProduto) 
